@@ -1,0 +1,12 @@
+name = "starch"
+version = "1.0.0"
+description = "xkcd-style charts for Gleam (JavaScript target only)"
+licences = ["Apache-2.0"]
+repository = { type = "github", user = "gvwilson", repo = "starch" }
+links = []
+
+[dependencies]
+gleam_stdlib = ">= 1.0.0 and < 2.0.0"
+
+[dev_dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
