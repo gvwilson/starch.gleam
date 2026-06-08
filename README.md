@@ -9,6 +9,8 @@ a local fork — see `src/js/`).
 
 ## Charts
 
+![Chart examples](https://raw.githubusercontent.com/gvwilson/starch.gleam/main/charts.png)
+
 | Function | Chart type |
 |---|---|
 | `bar` | Bar (single or grouped) |
