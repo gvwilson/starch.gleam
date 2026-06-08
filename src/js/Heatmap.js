@@ -2,7 +2,7 @@ import { select, mouse, event as d3Event } from 'd3-selection';
 import { scaleBand, scaleLinear } from 'd3-scale';
 
 import addAxis from './utils/addAxis';
-import { tooltipPositionType } from './components/Tooltip';
+import { tooltipPositionType } from './utils/Tooltip';
 import config from './config';
 import {
   applyDefaults, setupMargin, resolveFilterAndFont,

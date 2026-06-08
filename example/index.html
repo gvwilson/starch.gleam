@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>starch — chart examples</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 1rem 2rem;
+      background: #fafafa;
+    }
+    h1 { margin-bottom: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .chart-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .chart-box h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      color: #444;
+    }
+    /* Give each SVG a defined container width */
+    .chart-box svg { width: 100%; display: block; }
+
+  </style>
+</head>
+<body>
+  <h1>starch chart examples</h1>
+  <div class="grid">
+    <div class="chart-box">
+      <h2>Bar</h2>
+      <svg id="chart-bar"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Line</h2>
+      <svg id="chart-line"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Pie</h2>
+      <svg id="chart-pie"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Scatter</h2>
+      <svg id="chart-scatter"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Radar</h2>
+      <svg id="chart-radar"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Stacked Bar</h2>
+      <svg id="chart-stacked-bar"></svg>
+    </div>
+    <div class="chart-box">
+      <h2>Heatmap</h2>
+      <svg id="chart-heatmap"></svg>
+    </div>
+  </div>
+  <script type="module">
+    import { main } from './build/dev/javascript/example/app.mjs';
+    main();
+  </script>
+</body>
+</html>

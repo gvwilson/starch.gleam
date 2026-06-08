@@ -3,7 +3,7 @@ import { select } from 'd3-selection';
 import addFont from './addFont';
 import addFilter from './addFilter';
 import addLabels from './addLabels';
-import Tooltip from '../components/Tooltip';
+import Tooltip from './Tooltip';
 import colors from './colors';
 import config from '../config';
 

@@ -1,8 +1,8 @@
 name = "starch"
 version = "1.0.0"
 description = "xkcd-style charts for Gleam (JavaScript target only)"
-licences = ["Apache-2.0"]
-repository = { type = "github", user = "gvwilson", repo = "starch" }
+licences = ["MIT"]
+repository = { type = "github", user = "gvwilson", repo = "starch.gleam" }
 links = []
 
 [dependencies]

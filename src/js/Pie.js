@@ -2,7 +2,7 @@ import { select, mouse, event as d3Event } from 'd3-selection';
 import { pie, arc } from 'd3-shape';
 
 import addLegend from './utils/addLegend';
-import { tooltipPositionType } from './components/Tooltip';
+import { tooltipPositionType } from './utils/Tooltip';
 import config from './config';
 import {
   applyDefaults, resolveFilterAndFont,

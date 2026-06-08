@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import addAxis from './utils/addAxis';
 import addLegend from './utils/addLegend';
-import { tooltipPositionType } from './components/Tooltip';
+import { tooltipPositionType } from './utils/Tooltip';
 import config from './config';
 import {
   applyDefaults, setupMargin, resolveFilterAndFont,

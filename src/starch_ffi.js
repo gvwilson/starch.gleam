@@ -18,9 +18,8 @@ import Radar from './js/Radar.js';
 import Scatter from './js/Scatter.js';
 import StackedBar from './js/StackedBar.js';
 
-// After `gleam build --target javascript` the Gleam prelude is one
-// directory above each package's compiled output.
-import { Ok, Error as GleamError } from '../gleam.mjs';
+// The Gleam prelude is copied alongside each package's compiled output.
+import { Ok, Error as GleamError } from './gleam.mjs';
 
 // ---------------------------------------------------------------------------
 // Runtime type conversion helpers

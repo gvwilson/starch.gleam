@@ -57,9 +57,9 @@ pub fn main() {
 
   starch.bar(
     svg,
-    labels: ["Q1", "Q2", "Q3", "Q4"],
-    datasets:,
-    options: starch.BarOptions(
+    ["Q1", "Q2", "Q3", "Q4"],
+    datasets,
+    starch.BarOptions(
       ..starch.default_bar_options(),
       title: option.Some("Quarterly sales"),
     ),
@@ -170,10 +170,10 @@ The heatmap function takes row and column labels separately plus a
 ```gleam
 starch.heatmap(
   svg,
-  labels: ["Col A", "Col B", "Col C"],
-  y_labels: ["Row 1", "Row 2"],
-  data: [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]],
-  options: starch.default_heatmap_options(),
+  ["Col A", "Col B", "Col C"],
+  ["Row 1", "Row 2"],
+  [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]],
+  starch.default_heatmap_options(),
 )
 ```
 
@@ -184,15 +184,51 @@ Scatter charts use `ScatterDataset` and `Point` instead of `Dataset`:
 ```gleam
 starch.scatter(
   svg,
-  datasets: [
+  [
     starch.ScatterDataset(
       label: "Group A",
       data: [starch.Point(x: 1.0, y: 2.0), starch.Point(x: 3.0, y: 4.0)],
     ),
   ],
-  options: starch.default_scatter_options(),
+  starch.default_scatter_options(),
 )
 ```
+
+## Running the example
+
+`example/` is a small Gleam application (`example/src/app.gleam`) that renders
+all seven chart types with static data. `npm run dev` compiles it to JavaScript
+and starts a Vite dev server:
+
+```sh
+npm install
+npm run dev     # compiles Gleam, then opens http://localhost:5173
+```
+
+The two-step build works like this:
+
+1. `cd example && gleam build --target javascript` compiles `app.gleam` and
+   the starch library into `example/build/dev/javascript/`.
+2. Vite picks up `example/entry.js`, which imports the compiled `app.mjs`,
+   and bundles everything (including d3) for the browser.
+
+To rebuild after changing `app.gleam`:
+
+```sh
+cd example && gleam build --target javascript && cd ..
+npm run dev
+```
+
+For a one-shot production bundle:
+
+```sh
+npm run build   # output in example/dist/
+```
+
+**Note on labelled arguments.** Gleam supports labelled arguments on regular
+functions but not on `@external` functions. Call `starch.bar`, `starch.line`,
+etc. with positional arguments only — see `example/src/app.gleam` for working
+examples.
 
 ## Development
 
